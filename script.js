@@ -1,31 +1,55 @@
-// Inicializações quando o DOM estiver pronto
-document.addEventListener('DOMContentLoaded', function() {
-    // Efeito de digitação no hero
-    const typed = new Typed('.typing', {
-        strings: ['Inteligência Artificial', 'Machine Learning', 'Deep Learning', 'Inovação'],
-        typeSpeed: 100,
-        backSpeed: 60,
-        loop: true
-    });
+/* Estilos gerais */
+:root {
+    --primary: #6e45e2;
+    --secondary: #88d3ce;
+    --accent: #ff7e5f;
+    --dark: #1a1a2e;
+    --light: #f8f9fa;
+}
 
-    // Partículas no background
-    particlesJS('particles-js', {
-        // Configurações das partículas
-    });
+/* Novos estilos para conteúdo rico */
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
 
-    // Efeito de cursor personalizado
-    const cursor = document.querySelector('.cursor');
-    const cursorFollower = document.querySelector('.cursor-follower');
-    
-    document.addEventListener('mousemove', (e) => {
-        cursor.style.left = e.clientX + 'px';
-        cursor.style.top = e.clientY + 'px';
-        
-        setTimeout(() => {
-            cursorFollower.style.left = e.clientX + 'px';
-            cursorFollower.style.top = e.clientY + 'px';
-        }, 100);
-    });
+.about-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
 
-    // Outras interações continuam...
-});
+.about-card:hover {
+    transform: translateY(-10px);
+}
+
+.about-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.about-card h3 {
+    color: var(--primary);
+    padding: 15px 20px 0;
+}
+
+.about-card p {
+    padding: 0 20px 20px;
+    color: var(--dark);
+}
+
+/* Efeito pulsante para CTA */
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
