@@ -4,42 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Correção do CSP (Content Security Policy) -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; img-src 'self' data:;">
+    <!-- CSP corrigido permitindo recursos necessários -->
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self';
+        script-src 'self' 'unsafe-inline';
+        style-src 'self' 'unsafe-inline';
+        img-src 'self' data:;
+        font-src 'self';
+    ">
     
-    <!-- Favicon em SVG (emoji substituído por código hexadecimal) -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>\01F916</text></svg>">
+    <!-- Favicon corrigido (sem emoji problemático) -->
+    <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAxMDAgMTAwJz48Y2lyY2xlIGN4PSc1MCcgY3k9JzUwJyByPSc0MCcgZmlsbD0nIzZlNDhhYScvPjxjaXJjbGUgY3g9JzM1JyBjeT0nNDAnIHI9JzgnIGZpbGw9JyNmZmYnLz48Y2lyY2xlIGN4PSc2NScgY3k9JzQwJyByPSc4JyBmaWxsPScjZmZmJy8+PHBhdGggZD0nTTMwIDY1IHEyMCAxNSA0MCAwJyBzdHJva2U9JyNmZmYnIHN0cm9rZS13aWR0aD0nNicgc3Ryb2tlLWxpbmVjYXA9J3JvdW5kJy8+PC9zdmc+">
     
     <title>Site de IA</title>
     
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-        }
-        header {
-            background-color: #6e48aa;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 10px auto;
-        }
-    </style>
+    <!-- CSS movido para arquivo externo -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -49,23 +29,16 @@
     
     <div class="container">
         <h2>Demonstração</h2>
-        <img src="images/chatbot.jpg" alt="Chatbot de IA">
+        <!-- Imagem com fallback -->
+        <img src="images/chatbot.jpg" alt="Chatbot de IA" onerror="this.onerror=null;this.src='placeholder.jpg'">
+        
         <section>
             <h3>Sobre</h3>
             <p>Este projeto demonstra tecnologias de inteligência artificial.</p>
         </section>
     </div>
 
-    <!-- Script opcional para garantir o favicon -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            if (!document.querySelector('link[rel="icon"]')) {
-                const favicon = document.createElement('link');
-                favicon.rel = 'icon';
-                favicon.href = 'data:image/svg+xml,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\'><text y=\'.9em\' font-size=\'90\'>\01F916</text></svg>';
-                document.head.appendChild(favicon);
-            }
-        });
-    </script>
+    <!-- Script externo -->
+    <script src="script.js"></script>
 </body>
 </html>
