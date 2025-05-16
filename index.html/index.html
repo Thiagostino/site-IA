@@ -3,268 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IA Moderna - Revolução Tecnológica</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Site Moderno de IA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
-<script src="script.js"></script>
 <body>
-    <!-- Cursor Personalizado -->
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
-
-    <!-- Header Glassmorphism -->
-    <header class="glass-header">
+    <header>
         <div class="container">
             <nav>
-                <div class="logo">
-                    <i class="fas fa-brain-circuit"></i>
-                    <span>NeuroTech</span>
-                </div>
-                <ul class="nav-links">
-                    <li><a href="#home" class="nav-link">Home</a></li>
-                    <li><a href="#sobre" class="nav-link">Sobre IA</a></li>
-                    <li><a href="#tecnologias" class="nav-link">Tecnologias</a></li>
-                    <li><a href="#cases" class="nav-link">Cases</a></li>
-                    <li><a href="#contato" class="nav-link">Contato</a></li>
+                <div class="logo">IA<span>Moderno</span></div>
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">Recursos</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#" class="btn">Contato</a></li>
                 </ul>
-                <div class="menu-toggle">
-                    <i class="fas fa-bars"></i>
-                </div>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section com Partículas -->
-    <section id="home" class="hero">
-        <div id="particles-js"></div>
+    <section class="hero">
         <div class="container">
-            <div class="hero-content">
-                <h1 class="animate" data-delay="0">
-                    A <span class="gradient-text">Revolução</span> da 
-                    <span class="typing"></span>
-                </h1>
-                <p class="animate" data-delay="0.2s">Descubra como a inteligência artificial está redefinindo o futuro dos negócios e da sociedade</p>
-                <div class="hero-buttons animate" data-delay="0.4s">
-                    <a href="#tecnologias" class="btn btn-primary pulse">
-                        <i class="fas fa-rocket"></i> Explorar
-                    </a>
-                    <a href="#contato" class="btn btn-secondary">
-                        <i class="fas fa-handshake"></i> Contato
-                    </a>
-                </div>
-            </div>
-            <div class="hero-image animate" data-delay="0.6s">
-                <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="IA Moderna" class="glow">
-            </div>
-        </div>
-        <div class="scroll-down">
-            <span></span>
-        </div>
-    </section>
-
-    <!-- Seção Sobre -->
-    <section id="sobre" class="about">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-subtitle">Tecnologia do Futuro</span>
-                <h2 class="section-title">O Poder da <span class="gradient-text">Inteligência</span> Artificial</h2>
-            </div>
-            
-            <div class="about-grid">
-                <div class="about-card animate" data-delay="0">
-                    <div class="card-icon">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <h3>Machine Learning</h3>
-                    <p>Sistemas que aprendem e melhoram automaticamente com experiência</p>
-                    <div class="wave"></div>
-                </div>
-                
-                <div class="about-card animate" data-delay="0.2s">
-                    <div class="card-icon">
-                        <i class="fas fa-eye"></i>
-                    </div>
-                    <h3>Visão Computacional</h3>
-                    <p>Computadores que enxergam e interpretam imagens como humanos</p>
-                    <div class="wave"></div>
-                </div>
-                
-                <div class="about-card animate" data-delay="0.4s">
-                    <div class="card-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3>Redes Neurais</h3>
-                    <p>Algoritmos inspirados no cérebro humano para tomada de decisões</p>
-                    <div class="wave"></div>
-                </div>
+            <h1>Transforme seu Negócio com IA</h1>
+            <p>Soluções inteligentes para resultados extraordinários</p>
+            <div class="cta">
+                <a href="#" class="btn">Comece Agora</a>
+                <a href="#" class="btn btn-outline">Saiba Mais</a>
             </div>
         </div>
     </section>
 
-    <!-- Seção Tecnologias -->
-    <section id="tecnologias" class="tech">
-        <div class="container">
-            <div class="section-header center">
-                <span class="section-subtitle">Inovação</span>
-                <h2 class="section-title">Tecnologias <span class="gradient-text">Emergentes</span></h2>
-            </div>
-            
-            <div class="tech-tabs">
-                <div class="tab-header">
-                    <div class="tab-btn active" data-tab="1">IA Generativa</div>
-                    <div class="tab-btn" data-tab="2">LLMs</div>
-                    <div class="tab-btn" data-tab="3">Computer Vision</div>
-                    <div class="tab-btn" data-tab="4">Robótica</div>
-                    <div class="tab-indicator"></div>
-                </div>
-                
-                <div class="tab-content">
-                    <div class="tab-panel active" data-tab="1">
-                        <div class="panel-content">
-                            <div class="panel-text">
-                                <h3>IA Generativa</h3>
-                                <p>Criação de conteúdo original por inteligência artificial, incluindo texto, imagens, música e vídeos.</p>
-                                <ul>
-                                    <li><i class="fas fa-check"></i> GPT-4 e modelos similares</li>
-                                    <li><i class="fas fa-check"></i> Stable Diffusion e Midjourney</li>
-                                    <li><i class="fas fa-check"></i> Aplicações em design e marketing</li>
-                                </ul>
-                                <a href="#" class="btn btn-outline">Saiba Mais</a>
-                            </div>
-                            <div class="panel-image">
-                                <img src="https://images.unsplash.com/photo-1677442136015-810b5a4f7075?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="IA Generativa">
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Outros painéis de abas aqui -->
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Adicione mais seções conforme necessário -->
 
-    <!-- Seção Cases -->
-    <section id="cases" class="cases">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-subtitle">Sucesso Comprovado</span>
-                <h2 class="section-title">Cases de <span class="gradient-text">Implementação</span></h2>
-            </div>
-            
-            <div class="cases-grid">
-                <!-- Cards de cases aqui -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Seção Contato -->
-    <section id="contato" class="contact">
-        <div class="container">
-            <div class="contact-wrapper">
-                <div class="contact-info">
-                    <h2>Vamos conversar sobre <span class="gradient-text">IA</span></h2>
-                    <p>Preencha o formulário ou entre em contato diretamente</p>
-                    
-                    <div class="info-items">
-                        <div class="info-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>contato@neurotech.ai</span>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-phone"></i>
-                            <span>+55 (11) 98765-4321</span>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>São Paulo - Brasil</span>
-                        </div>
-                    </div>
-                    
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="fab fa-discord"></i></a>
-                    </div>
-                </div>
-                
-                <form class="contact-form">
-                    <div class="form-group">
-                        <input type="text" placeholder="Seu Nome" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Seu E-mail" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" placeholder="Assunto">
-                    </div>
-                    <div class="form-group">
-                        <textarea placeholder="Sua Mensagem" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">
-                        <i class="fas fa-paper-plane"></i> Enviar Mensagem
-                    </button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <i class="fas fa-brain-circuit"></i>
-                    <span>NeuroTech</span>
-                </div>
-                <div class="footer-links">
-                    <div class="links-column">
-                        <h3>Navegação</h3>
-                        <ul>
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="#sobre">Sobre IA</a></li>
-                            <li><a href="#tecnologias">Tecnologias</a></li>
-                        </ul>
-                    </div>
-                    <div class="links-column">
-                        <h3>Recursos</h3>
-                        <ul>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Documentação</a></li>
-                            <li><a href="#">Tutoriais</a></li>
-                        </ul>
-                    </div>
-                    <div class="links-column">
-                        <h3>Legal</h3>
-                        <ul>
-                            <li><a href="#">Termos</a></li>
-                            <li><a href="#">Privacidade</a></li>
-                            <li><a href="#">Cookies</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2023 NeuroTech IA. Todos os direitos reservados.</p>
-                <div class="language-switcher">
-                    <i class="fas fa-globe"></i>
-                    <select>
-                        <option>Português</option>
-                        <option>English</option>
-                        <option>Español</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
