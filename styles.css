@@ -1,108 +1,55 @@
-/* Variáveis */
+/* Estilos gerais */
 :root {
-    --roxo: #6e45e2;
-    --azul: #2575fc;
-    --ciano: #00f2fe;
-    --branco: #ffffff;
-    --preto: #1a1a2e;
+    --primary: #6e45e2;
+    --secondary: #88d3ce;
+    --accent: #ff7e5f;
+    --dark: #1a1a2e;
+    --light: #f8f9fa;
 }
 
-/* Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Novos estilos para conteúdo rico */
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
 }
 
-body {
-    font-family: 'Inter', sans-serif;
-    background: linear-gradient(-45deg, #6a11cb, #2575fc, #4facfe, #00f2fe);
-    background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
-    color: var(--branco);
-    min-height: 100vh;
+.about-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
 }
 
-@keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+.about-card:hover {
+    transform: translateY(-10px);
 }
 
-/* Header */
-.glass-header {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    padding: 20px 0;
-    position: fixed;
+.about-card img {
     width: 100%;
-    z-index: 1000;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    height: 200px;
+    object-fit: cover;
 }
 
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+.about-card h3 {
+    color: var(--primary);
+    padding: 15px 20px 0;
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.about-card p {
+    padding: 0 20px 20px;
+    color: var(--dark);
 }
 
-/* Hero Section */
-.hero {
-    padding: 180px 0;
-    text-align: center;
+/* Efeito pulsante para CTA */
+.pulse {
+    animation: pulse 2s infinite;
 }
 
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
-
-.hero h1 span {
-    background: linear-gradient(90deg, var(--ciano), var(--roxo));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-}
-
-.hero-image {
-    width: 100%;
-    max-width: 800px;
-    border-radius: 20px;
-    margin-top: 50px;
-    box-shadow: 0 25px 50px rgba(0,0,0,0.3);
-}
-
-/* Botões */
-.btn {
-    display: inline-block;
-    padding: 12px 30px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    margin: 0 10px;
-}
-
-.btn-primary {
-    background: var(--branco);
-    color: var(--roxo);
-}
-
-.btn-outline {
-    border: 2px solid var(--branco);
-    color: var(--branco);
-}
-
-.btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
 }
