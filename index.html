@@ -4,35 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- CSP À PROVA DE BALAS -->
+    <!-- CSP Configurado Certinho -->
     <meta http-equiv="Content-Security-Policy" content="
         default-src 'self';
         script-src 'self' 'unsafe-inline';
         style-src 'self' 'unsafe-inline';
         img-src 'self' data: https:;
-        font-src 'self';
     ">
     
-    <!-- Favicon em SVG sem erro -->
+    <!-- Favicon que não quebra -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%236e48aa'/><circle cx='35' cy='40' r='8' fill='white'/><circle cx='65' cy='40' r='8' fill='white'/><path d='M30 65 q20 15 40 0' stroke='white' stroke-width='6' fill='none'/></svg>">
     
     <title>Site IA Funcionando</title>
     
-    <!-- CSS direto no HTML (simples e eficaz) -->
+    <!-- CSS DIRETO NO HTML (sem arquivo externo) -->
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background: #f5f5f5;
-            line-height: 1.6;
         }
         header {
             background: #6e48aa;
             color: white;
             padding: 20px;
             text-align: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
         .container {
             max-width: 800px;
@@ -46,41 +43,43 @@
             max-width: 100%;
             height: auto;
             display: block;
-            margin: 15px auto;
-            border-radius: 4px;
+            margin: 10px auto;
         }
-        h1 { margin: 0; }
-        h2 { color: #6e48aa; }
     </style>
 </head>
 <body>
     <header>
-        <h1>IA que Agora Funciona</h1>
-        <p>Sem erros, sem stress</p>
+        <h1>IA que Agora Vai</h1>
+        <p>Sem arquivos externos, sem erro 404</p>
     </header>
     
     <div class="container">
         <h2>Chatbot</h2>
-        <!-- Imagem com fallback inteligente -->
-        <img src="images/chatbot.jpg" alt="Chatbot IA" onerror="this.src='https://placehold.co/600x400/6e48aa/white?text=Chatbot+IA&font=arial'">
+        <!-- Imagem com fallback DIRETO (sem placeholder.jpg) -->
+        <img src="images/chatbot.jpg" alt="Chatbot IA" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgMjAwIj48cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iIzZlNDhhYSIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIj5DaGF0Ym90IElBPC90ZXh0Pjwvc3ZnPg=='">
         
         <section>
-            <h3>Como ficou à prova de erros:</h3>
+            <h3>O que corrigimos:</h3>
             <ul>
-                <li><strong>CSP configurado</strong> pra permitir o necessário</li>
-                <li><strong>Favicon inline</strong> que nunca quebra</li>
-                <li><strong>CSS interno</strong> sem arquivos extras</li>
-                <li><strong>Fallback pra imagem</strong> (se não achar, mostra um placeholder)</li>
+                <li>❌ <del>styles.css</del> → CSS interno</li>
+                <li>❌ <del>script.js</del> → JS interno</li>
+                <li>❌ <del>placeholder.jpg</del> → Fallback em base64</li>
             </ul>
         </section>
     </div>
 
-    <!-- Script mínimo direto no HTML -->
+    <!-- JS DIRETO NO HTML (sem arquivo externo) -->
     <script>
-        // Só pra confirmar que tá tudo OK
-        console.log('Tudo funcionando! ✅');
+        // Confirma que tudo carregou
+        console.log('Tudo OK!');
+        
+        // Fallback avançado pra imagem
         document.addEventListener('DOMContentLoaded', function() {
-            console.log('Página totalmente carregada');
+            const img = document.querySelector('img');
+            img.onerror = function() {
+                this.src = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgMjAwIj48cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iIzZlNDhhYSIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIj5DaGF0Ym90IElBPC90ZXh0Pjwvc3ZnPg==';
+                console.log('Imagem substituída por fallback');
+            };
         });
     </script>
 </body>
