@@ -67,3 +67,32 @@ header {
     transform: translateY(-10px);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
 }
+
+
+body {
+    margin: 0 auto;
+    max-width: 1200px; /* Largura máxima elegante */
+    padding: 0 20px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%) fixed;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: linear-gradient(45deg, #6e45e2, #88d3ce);
+    color: white !important;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(110, 69, 226, 0.4);
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(110, 69, 226, 0.6);
+}
+
+
