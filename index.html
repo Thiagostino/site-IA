@@ -3,42 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NeuroTech - IA Revolucionária</title>
+    <title>IA Revolution - Tudo sobre Inteligência Artificial</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header -->
+    <!-- Menu de Navegação -->
     <header class="glass-header">
         <div class="container">
             <div class="logo">
-                <i class="fas fa-brain"></i>
-                <span>NeuroTech</span>
+                <i class="fas fa-brain-circuit"></i>
+                <span>IA Revolution</span>
             </div>
-            <nav>
-                <a href="#">Início</a>
-                <a href="#">Soluções</a>
-                <a href="#" class="btn">Contato</a>
+            <nav id="main-nav">
+                <a href="#home">Início</a>
+                <a href="#sobre">O Que é IA?</a>
+                <a href="#aplicacoes">Aplicações</a>
+                <a href="#tecnologias">Tecnologias</a>
+                <a href="#contato">Contato</a>
             </nav>
+            <button class="menu-mobile" id="menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- Seção Hero -->
+    <section id="home" class="hero">
         <div class="container">
-            <h1>Transforme seu Negócio com <span>IA</span></h1>
-            <p>Soluções inteligentes para resultados extraordinários</p>
-            <div class="cta">
-                <a href="#" class="btn btn-primary">
-                    <i class="fas fa-rocket"></i> Comece Agora
-                </a>
-                <a href="#" class="btn btn-outline">
-                    <i class="fas fa-play"></i> Ver Demonstração
+            <div class="hero-content">
+                <h1>Domine o Futuro com <span>Inteligência Artificial</span></h1>
+                <p>Tudo o que você precisa saber sobre a revolução tecnológica que está transformando o mundo</p>
+                <a href="#sobre" class="btn btn-primary pulse">
+                    <i class="fas fa-book-open"></i> Comece a Aprender
                 </a>
             </div>
-            <img src="imagens/ia-hero.jpg" alt="IA Moderna" class="hero-image">
+            <div class="hero-image">
+                <img src="imagens/hero-ia.jpg" alt="IA revolucionária">
+            </div>
         </div>
     </section>
+
+    <!-- Seção "O Que é IA" -->
+    <section id="sobre" class="about">
+        <div class="container">
+            <h2><i class="fas fa-question-circle"></i> O Que é Inteligência Artificial?</h2>
+            <div class="about-grid">
+                <div class="about-card">
+                    <img src="imagens/machine-learning.jpg" alt="Machine Learning">
+                    <h3>Definição</h3>
+                    <p>IA é a simulação de processos de inteligência humana por máquinas, incluindo aprendizado, raciocínio e autocorreção.</p>
+                </div>
+                <div class="about-card">
+                    <img src="imagens/chatbot.jpg" alt="Chatbot">
+                    <h3>História</h3>
+                    <p>Desde o teste de Turing em 1950 até os modernos sistemas de deep learning.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Aplicações -->
+    <section id="aplicacoes" class="applications">
+        <div class="container">
+            <h2><i class="fas fa-rocket"></i> Aplicações Práticas</h2>
+            <div class="app-grid">
+                <!-- Cards de aplicações aqui -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <!-- Conteúdo do rodapé -->
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
