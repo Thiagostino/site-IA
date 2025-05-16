@@ -3,298 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Revolution IA - Inteligência Artificial</title>
-    
-    <!-- Favicon moderno -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%2300599b'/><path d='M30,65 Q50,80 70,65' stroke='%23fff' stroke-width='6' fill='none'/><circle cx='40' cy='45' r='8' fill='%23fff'/><circle cx='60' cy='45' r='8' fill='%23fff'/></svg>">
-    
-    <!-- Fontes do Google -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
-    
-    <!-- CSS Interno Profissional -->
-    <style>
-        :root {
-            --primary: #00599b;
-            --secondary: #ff6b35;
-            --dark: #292f36;
-            --light: #f7f7f7;
-            --success: #4caf50;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
-            color: var(--dark);
-            background-color: var(--light);
-        }
-        
-        header {
-            background: linear-gradient(135deg, var(--primary), #003b6d);
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        header::after {
-            content: '';
-            position: absolute;
-            bottom: -50px;
-            left: 0;
-            right: 0;
-            height: 100px;
-            background: var(--light);
-            transform: skewY(-2deg);
-            z-index: 1;
-        }
-        
-        .header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            position: relative;
-            z-index: 2;
-        }
-        
-        h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 3.5rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-        }
-        
-        .tagline {
-            font-size: 1.5rem;
-            font-weight: 300;
-            max-width: 800px;
-            margin: 0 auto 2rem;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: -30px auto 50px;
-            padding: 0 20px;
-            position: relative;
-            z-index: 3;
-        }
-        
-        .card-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-        
-        .card {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-        }
-        
-        .card-img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-        
-        .card-content {
-            padding: 25px;
-        }
-        
-        .card h3 {
-            font-family: 'Montserrat', sans-serif;
-            color: var(--primary);
-            margin-bottom: 15px;
-            font-size: 1.5rem;
-        }
-        
-        .card p {
-            margin-bottom: 20px;
-            color: #555;
-        }
-        
-        .btn {
-            display: inline-block;
-            background: var(--primary);
-            color: white;
-            padding: 12px 25px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-        
-        .btn:hover {
-            background: #004a82;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,89,155,0.3);
-        }
-        
-        .hero {
-            height: 500px;
-            background: url('https://images.unsplash.com/photo-1677442135136-760c813a743d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80') center/cover;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-        }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.6);
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 800px;
-            padding: 0 20px;
-        }
-        
-        .hero h2 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-        }
-        
-        footer {
-            background: var(--dark);
-            color: white;
-            text-align: center;
-            padding: 3rem 0;
-            margin-top: 50px;
-        }
-        
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2.5rem;
-            }
-            
-            .hero h2 {
-                font-size: 2rem;
-            }
-        }
-    </style>
+    <title>NeuroTech - IA Revolucionária</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Header -->
+    <header class="glass-header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-brain"></i>
+                <span>NeuroTech</span>
+            </div>
+            <nav>
+                <a href="#">Início</a>
+                <a href="#">Soluções</a>
+                <a href="#" class="btn">Contato</a>
+            </nav>
+        </div>
+    </header>
+
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-content">
-            <h2>Transformando o Futuro com IA</h2>
-            <p>Descubra como a Inteligência Artificial está revolucionando indústrias e criando novas possibilidades</p>
-            <a href="#conteudo" class="btn">Explore Mais</a>
+        <div class="container">
+            <h1>Transforme seu Negócio com <span>IA</span></h1>
+            <p>Soluções inteligentes para resultados extraordinários</p>
+            <div class="cta">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-rocket"></i> Comece Agora
+                </a>
+                <a href="#" class="btn btn-outline">
+                    <i class="fas fa-play"></i> Ver Demonstração
+                </a>
+            </div>
+            <img src="imagens/ia-hero.jpg" alt="IA Moderna" class="hero-image">
         </div>
     </section>
-
-    <!-- Main Content -->
-    <main id="conteudo" class="container">
-        <div class="card-grid">
-            <!-- Card 1 -->
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1677442135139-34af4d3aacf5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Machine Learning" class="card-img" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MDAgMzAwIj48cmVjdCB3aWR0aD0iNjAwIiBoZWlnaHQ9IjMwMCIgZmlsbD0iIzAwNTk5YiIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIj5NYWNoaW5lIExlYXJuaW5nPC90ZXh0Pjwvc3ZnPg=='">
-                <div class="card-content">
-                    <h3>Machine Learning</h3>
-                    <p>Algoritmos que aprendem com dados e melhoram automaticamente com a experiência, sem serem explicitamente programados.</p>
-                    <a href="#" class="btn">Saiba Mais</a>
-                </div>
-            </div>
-            
-            <!-- Card 2 -->
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1655720828012-1af0f523d7a8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Deep Learning" class="card-img" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MDAgMzAwIj48cmVjdCB3aWR0aD0iNjAwIiBoZWlnaHQ9IjMwMCIgZmlsbD0iIzAwNTk5YiIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIj5EZWVwIExlYXJuaW5nPC90ZXh0Pjwvc3ZnPg=='">
-                <div class="card-content">
-                    <h3>Deep Learning</h3>
-                    <p>Redes neurais artificiais com múltiplas camadas que simulam o aprendizado do cérebro humano.</p>
-                    <a href="#" class="btn">Saiba Mais</a>
-                </div>
-            </div>
-            
-            <!-- Card 3 -->
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Chatbots" class="card-img" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MDAgMzAwIj48cmVjdCB3aWR0aD0iNjAwIiBoZWlnaHQ9IjMwMCIgZmlsbD0iIzAwNTk5YiIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIj5DaGF0Ym90czwvdGV4dD48L3N2Zz4='">
-                <div class="card-content">
-                    <h3>Chatbots Inteligentes</h3>
-                    <p>Assistentes virtuais que usam NLP para entender e responder perguntas humanas de forma natural.</p>
-                    <a href="#" class="btn">Saiba Mais</a>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <h3>Revolution IA</h3>
-            <p>© 2023 Todos os direitos reservados</p>
-        </div>
-    </footer>
-
-    <!-- JavaScript -->
-    <script>
-        // Efeito smooth scroll para links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-        
-        // Console message
-        console.log('Site carregado com sucesso! Desenvolvido com ❤️ para entusiastas de IA');
-        
-        // Fallback avançado para imagens
-        document.addEventListener('DOMContentLoaded', function() {
-            const images = document.querySelectorAll('img');
-            images.forEach(img => {
-                img.onerror = function() {
-                    const altText = this.alt || 'Imagem';
-                    this.src = `data:image/svg+xml;base64,${btoa(`
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300">
-                            <rect width="600" height="300" fill="#00599b"/>
-                            <text x="50%" y="50%" font-family="Arial" font-size="24" fill="white" 
-                                text-anchor="middle" dominant-baseline="middle">
-                                ${altText}
-                            </text>
-                        </svg>
-                    `)}`;
-                };
-            });
-        });
-    </script>
 </body>
 </html>
