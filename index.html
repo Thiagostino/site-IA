@@ -4,15 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- SOLUÇÃO PARA O ERRO DE CSP (Content Security Policy) -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'">
+    <!-- Correção do CSP (Content Security Policy) -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; img-src 'self' data:;">
     
-    <!-- SOLUÇÃO PARA O FAVICON (ícone da aba) -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>">
+    <!-- Favicon em SVG (emoji substituído por código hexadecimal) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>\01F916</text></svg>">
     
-    <title>Meu Site de IA</title>
+    <title>Site de IA</title>
     
-    <!-- Seus estilos CSS podem vir aqui -->
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -34,30 +33,38 @@
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Meu Projeto de IA</h1>
-        <p>Bem-vindo ao site sobre Inteligência Artificial</p>
+        <h1>Projeto de IA</h1>
+        <p>Chatbot e Machine Learning</p>
     </header>
     
     <div class="container">
-        <h2>Chatbot de IA</h2>
-        <!-- Adicione aqui a imagem do chatbot -->
-        <img src="images/chatbot.jpg" alt="Chatbot de IA" style="max-width: 100%; height: auto;">
-        
+        <h2>Demonstração</h2>
+        <img src="images/chatbot.jpg" alt="Chatbot de IA">
         <section>
-            <h3>Sobre o Projeto</h3>
-            <p>Este é um site demonstrativo sobre tecnologias de Inteligência Artificial.</p>
+            <h3>Sobre</h3>
+            <p>Este projeto demonstra tecnologias de inteligência artificial.</p>
         </section>
     </div>
 
-    <!-- Seus scripts JavaScript podem vir aqui -->
+    <!-- Script opcional para garantir o favicon -->
     <script>
-        // Exemplo de código JavaScript seguro
         document.addEventListener('DOMContentLoaded', function() {
-            console.log('Página carregada com sucesso!');
+            if (!document.querySelector('link[rel="icon"]')) {
+                const favicon = document.createElement('link');
+                favicon.rel = 'icon';
+                favicon.href = 'data:image/svg+xml,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\'><text y=\'.9em\' font-size=\'90\'>\01F916</text></svg>';
+                document.head.appendChild(favicon);
+            }
         });
     </script>
 </body>
