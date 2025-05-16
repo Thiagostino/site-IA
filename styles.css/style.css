@@ -1,38 +1,68 @@
-/* RESET FORÇADO - Garante que todas as mudanças apareçam */
-* {
-    margin: 0 !important;
-    padding: 0 !important;
-    box-sizing: border-box !important;
-    font-family: 'Inter', sans-serif !important;
+:root {
+  --roxo-profundo: #6a11cb;
+  --azul-elétrico: #2575fc;
+  --branco: #ffffff;
+  --preto: #1a1a2e;
+  --cinza-claro: #f8f9fa;
 }
 
+/* Reset Total + Fundo Gradiente Animado */
 body {
-    background: linear-gradient(135deg, #6e45e2, #88d3ce) fixed !important;
-    color: white !important;
-    min-height: 100vh !important;
-    text-align: center !important;
-    padding-top: 80px !important;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(-45deg, #6a11cb, #2575fc, #4facfe, #00f2fe);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  color: var(--branco);
+  min-height: 100vh;
 }
 
-/* HEADER VISÍVEL */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Header Estilo Glass */
 header {
-    background: rgba(0,0,0,0.5) !important;
-    padding: 20px !important;
-    position: fixed !important;
-    top: 0 !important;
-    width: 100% !important;
-    z-index: 1000 !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(10px);
+  padding: 20px 0;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* BOTÕES QUE REALMENTE PARECEM BOTÕES */
+/* Botão que parece de App */
 .btn {
-    display: inline-block !important;
-    padding: 12px 30px !important;
-    background: white !important;
-    color: #6e45e2 !important;
-    border-radius: 30px !important;
-    text-decoration: none !important;
-    font-weight: bold !important;
-    margin: 10px !important;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2) !important;
+  display: inline-block;
+  padding: 12px 32px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Card com Efeito Neomorfismo */
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.15);
 }
